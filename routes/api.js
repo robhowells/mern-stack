@@ -10,10 +10,6 @@ router.get('/results', (req, res, next) => {
     .catch(next)
 });
 
-router.get('/nominate', (req, res, next) => {
-    res.send('Nominate a HOTW');
-});
-
 router.post('/nominate', (req, res, next) => {
   if(req.body.nominee){
     Nomination.create(req.body)
