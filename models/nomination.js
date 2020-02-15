@@ -10,6 +10,6 @@ const NominationSchema = new Schema({
 })
 
 //create model for result
-const Nomination = mongoose.model('todo', NominationSchema);
+const Nomination = mongoose.model('results', NominationSchema);
 
 module.exports = Nomination;
