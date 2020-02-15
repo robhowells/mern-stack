@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ExampleComponent from './components/ExampleComponent/ExampleComponent';
+import Results from './components/Results/Results';
 
 const App = () => {
-  return <ExampleComponent />
+  return <Results />
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

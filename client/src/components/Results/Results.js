@@ -1,9 +1,8 @@
 
 import React from 'react';
 import axios from 'axios';
-import './example-component.scss';
 
-class ExampleComponent extends React.Component {
+class Results extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,4 +40,4 @@ class ExampleComponent extends React.Component {
   }
 }
 
-export default ExampleComponent;
+export default Results;
