@@ -31,7 +31,7 @@ class Results extends React.Component {
     });
     return (
       <>
-        <h1>Nominations</h1>
+        <h1>Results</h1>
         <ul>
           {results}
         </ul>
