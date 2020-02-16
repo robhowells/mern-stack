@@ -3,9 +3,7 @@ const router = express.Router();
 const Nomination = require('../models/nomination');
 
 router.get('/results', (req, res, next) => {
-
-  //this will return all the data, exposing only the id and nominee field to the client
-  Nomination.find({}, 'nominee')
+  Nomination.find({}, 'nominee message')
     .then(data => res.json(data))
     .catch(next)
 });
@@ -15,9 +13,9 @@ router.post('/nominate', (req, res, next) => {
     Nomination.create(req.body)
       .then(data => res.json(data))
       .catch(next)
-  }else {
+  } else {
     res.json({
-      error: "The input field is empty"
+      error: 'The input field is empty'
     })
   }
 });

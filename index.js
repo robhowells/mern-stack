@@ -9,6 +9,9 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, 'client/dist')));
+
 //connect to the database
 mongoose.connect(process.env.DB, { useNewUrlParser: true })
   .then(() => console.log(`Database connected successfully`))
@@ -31,6 +34,11 @@ app.use((err, req, res, next) => {
   console.log(err);
   next();
 });
+
+// Handles any requests that don't match the ones above
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/dist/index.html'))
+})
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)

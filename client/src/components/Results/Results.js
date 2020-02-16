@@ -22,12 +22,13 @@ class Results extends React.Component {
             results: res.data,
           });
         }
-      })
+			})
+			.catch(err => console.log(err))
   }
   
   render() {
     const results = this.state.results.map((result) => {
-      return <li key={result._id}>{result.nominee}</li>
+      return <li key={result._id}>{result.nominee} - {result.message}</li>
     });
     return (
       <>
