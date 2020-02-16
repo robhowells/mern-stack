@@ -55,7 +55,7 @@ class Form extends React.Component {
 
 		return (
 			<>
-				<h1>Nomination</h1>
+				<h1>Nomination 2</h1>
 				{! submitted &&
 					<form onSubmit={this.postNomination}>
 						<div>
